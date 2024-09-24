@@ -1,0 +1,42 @@
+.product-detail {
+    display: flex;
+    padding: 2rem;
+}
+
+.product-detail-image img {
+          max-width: 100%;
+         height: auto;
+         border-radius: 5px;
+}
+.product-detail-info {
+    margin-left: 2rem;
+}
+
+.product-detail-info h1 {
+ font-size: 2rem;
+ margin-bottom: 1rem;
+}
+
+.product-detail-info p {
+font-size: 1.2rem;
+margin-bottom: 1.5rem;
+}
+
+.product-detail-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+
+.add-to-cart-btn {
+padding: 0.8rem 2rem;
+background-color: #333;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+
+
