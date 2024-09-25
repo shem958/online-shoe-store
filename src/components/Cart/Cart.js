@@ -1,22 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.css";
 
 function Cart() {
-  const cartItems = [
+  const [cartItems, setCartItems] = useState([
     {
       id: 1,
       name: "Running Shoe",
-      price: "$50",
+      price: 5000, // Price in KES
       quantity: 1,
       image: "/path/to/shoe1.jpg",
     },
-    // Add more cart items
-  ];
+  ]);
 
   const total = cartItems.reduce(
-    (sum, item) => sum + item.quantity * parseFloat(item.price.slice(1)),
+    (sum, item) => sum + item.quantity * item.price,
     0
   );
+
+  const handleQuantityChange = (id, change) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id
+          ? { ...item, quantity: Math.max(1, item.quantity + change) }
+          : item
+      )
+    );
+  };
+  const handleRemoveItem = (id) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
   return (
     <div className="cart-page">
       <h2>Your Cart</h2>
@@ -26,14 +38,29 @@ function Cart() {
             <img src={item.image} alt={item.name} />
             <div className="item-info">
               <h3>{item.name}</h3>
-              <p>Price: {item.price}</p>
-              <p>Quantity: {item.quantity}</p>
+              <p>Price: KES {item.price.toLocaleString()}</p>
+              <p>
+                Quantity:
+                <button onClick={() => handleQuantityChange(item.id, -1)}>
+                  -
+                </button>
+                {item.quantity}
+                <button onClick={() => handleQuantityChange(item.id, 1)}>
+                  +
+                </button>
+              </p>
+              <button
+                onClick={() => handleRemoveItem(item.id)}
+                className="remove-btn"
+              >
+                Remove
+              </button>
             </div>
           </div>
         ))}
       </div>
       <div className="cart-total">
-        <h3>Total: ${total.toFixed(2)}</h3>
+        <h3>Total: KES {total.toLocaleString()}</h3>
         <button className="checkout-btn">Proceed to Checkout</button>
       </div>
     </div>
