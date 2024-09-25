@@ -1,20 +1,71 @@
 .footer {
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Dark background */
+    color: white; /* Light text color */
     text-align: center;
     padding: 2rem 0;
     margin-top: auto;
+    font-family: 'Rubik', sans-serif; /* Apply Rubik font */
+}
+
+.footer-content {
+    max-width: 1200px; /* Center content with max width */
+    margin: 0 auto; /* Center align */
+    padding: 0 1rem; /* Add some padding */
+}
+
+.footer-top {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 1rem; /* Space below this section */
+}
+
+.footer-links {
+    margin: 1rem 0; /* Spacing above and below links */
 }
 
 .footer-content ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Remove margin */
 }
+
 .footer-content ul li {
-    display: inline;
-    margin: 0 1rem;
+    display: inline; /* Keep links in-line */
+    margin: 0 1rem; /* Space between links */
 }
+
 .footer-content ul li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+.social-media {
+    margin-left: auto; /* Push social media icons to the right */
+}
+
+.social-icon {
+    color: white; /* Icon color */
+    margin-left: 1rem; /* Space between icons */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-icon:hover {
+    color: #007BFF; /* Color on hover */
+}
+
+.back-to-top {
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 0.5rem 1rem; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 1rem; /* Spacing above button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
