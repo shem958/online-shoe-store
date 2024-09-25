@@ -1,51 +1,72 @@
 .product-listing {
-    padding: 2rem;
+    padding: 2rem; /* Add padding for spacing */
+    background-color: #ffffff; /* Light mode background */
 }
-.product-listing h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+
+.listing-title {
+    font-family: 'Rubik', sans-serif; /* Use Rubik font */
+    font-size: 2rem; /* Title size */
+    margin-bottom: 1rem; /* Space below title */
+    color: #333; /* Dark text color */
 }
 
 .search-bar {
-    display: block;
-    margin: 0 auto 2rem;
-    padding: 0.5rem;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%; /* Full width for the search bar */
+    padding: 0.5rem; /* Padding for input */
+    margin-bottom: 2rem; /* Space below search bar */
+    border: 1px solid #e1e1e1; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    display: grid; /* Use grid layout for products */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Gap between grid items */
 }
 
 .product-card {
-    background-color: white;
-    border: 1px #e1e1e1;
-    padding: 1rem;
-    text-align: center;
+    background-color: #f9f9f9; /* Light background for cards */
+    border: 1px solid #e1e1e1; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1rem; /* Padding for card */
+    text-align: center; /* Center text */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
 
-.product-card img {
-    width: 100%;
-    height: auto;
+.product-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow on hover */
 }
-.product-card h3 {
-    margin: 1rem 0;
+
+.product-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
 }
-.product-card p {
-    font-size: 1rem;
-    color: #555;
+
+.product-name {
+    font-family: 'Rubik', sans-serif; /* Use Rubik font */
+    margin: 0.5rem 0; /* Margin around name */
+    color: #333; /* Dark text */
 }
+
+.product-price {
+    font-size: 1.2rem; /* Price font size */
+    color: #007BFF; /* Highlight price color */
+    margin: 0.5rem 0; /* Space around price */
+}
+
 .view-details-btn {
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
+    display: inline-block; /* Inline block for button */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    padding: 0.5rem 1rem; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.view-details-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
