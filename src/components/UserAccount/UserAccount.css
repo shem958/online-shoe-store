@@ -1,36 +1,79 @@
-.login-page, .signup-page {
-    padding: 2rem;
+.login-page {
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4; /* Light background for better contrast */
+    padding: 2rem; /* Padding around content */
 }
 
-.login-form, .signup-form {
-    max-width: 400px;
-    margin: 0 auto;
+.login-title {
+    font-family: 'Rubik', sans-serif; /* Use Rubik font */
+    font-size: 2rem; /* Title size */
+    margin-bottom: 1.5rem; /* Space below title */
+    color: #333; /* Dark text color */
+}
+
+.login-form {
+    background-color: white; /* White background for the form */
+    padding: 2rem; /* Padding for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Space between form groups */
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #333;
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 0.5rem; /* Space below labels */
+    color: #555; /* Slightly lighter text for labels */
 }
 
-.form-group input {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input {
+    width: 100%; /* Full width input fields */
+    padding: 0.75rem; /* Padding inside input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s; /* Smooth transition for border */
 }
 
-.login-submit-btn, .signup-submit-btn {
-    padding: 0.8rem 2rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 2rem;
+input:focus {
+    border-color: #007BFF; /* Highlight border on focus */
+    outline: none; /* Remove outline */
+}
+
+.login-submit-btn {
+    width: 100%; /* Full width button */
+    padding: 0.75rem; /* Padding for button */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.login-submit-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.signup-prompt {
+    margin-top: 1rem; /* Space above prompt */
+    text-align: center; /* Center text */
+}
+
+.signup-prompt a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
