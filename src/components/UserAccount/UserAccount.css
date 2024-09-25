@@ -1,4 +1,5 @@
-.login-page {
+/* General styles for the user account pages */
+.user-account-page {
     display: flex; /* Flexbox for centering */
     flex-direction: column; /* Column layout */
     align-items: center; /* Center horizontally */
@@ -8,14 +9,16 @@
     padding: 2rem; /* Padding around content */
 }
 
-.login-title {
+/* Title styles for both Login and Signup */
+.user-account-title {
     font-family: 'Rubik', sans-serif; /* Use Rubik font */
     font-size: 2rem; /* Title size */
     margin-bottom: 1.5rem; /* Space below title */
     color: #333; /* Dark text color */
 }
 
-.login-form {
+/* Common form styles for both Login and Signup */
+.user-account-form {
     background-color: white; /* White background for the form */
     padding: 2rem; /* Padding for the form */
     border-radius: 10px; /* Rounded corners */
@@ -24,6 +27,7 @@
     max-width: 400px; /* Maximum width */
 }
 
+/* Styles for form groups */
 .form-group {
     margin-bottom: 1.5rem; /* Space between form groups */
 }
@@ -48,7 +52,8 @@ input:focus {
     outline: none; /* Remove outline */
 }
 
-.login-submit-btn {
+/* Styles for submit buttons */
+.user-account-submit-btn {
     width: 100%; /* Full width button */
     padding: 0.75rem; /* Padding for button */
     background-color: #007BFF; /* Button background color */
@@ -60,20 +65,21 @@ input:focus {
     transition: background-color 0.3s; /* Smooth transition */
 }
 
-.login-submit-btn:hover {
+.user-account-submit-btn:hover {
     background-color: #0056b3; /* Darker shade on hover */
 }
 
-.signup-prompt {
+/* Styles for prompts (e.g., login prompt on signup) */
+.prompt {
     margin-top: 1rem; /* Space above prompt */
     text-align: center; /* Center text */
 }
 
-.signup-prompt a {
+.prompt a {
     color: #007BFF; /* Link color */
     text-decoration: none; /* Remove underline */
 }
 
-.signup-prompt a:hover {
+.prompt a:hover {
     text-decoration: underline; /* Underline on hover */
 }

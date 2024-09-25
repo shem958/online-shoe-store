@@ -3,9 +3,9 @@ import "./UserAccount.css";
 
 function Login() {
   return (
-    <div className="login-page">
-      <h2 className="login-title">Login to Your Account</h2>
-      <form className="login-form">
+    <div className="user-account-page">
+      <h2 className="user-account-title">Login</h2>
+      <form className="user-account-form">
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
@@ -24,10 +24,10 @@ function Login() {
             placeholder="Enter your password"
           />
         </div>
-        <button type="submit" className="login-submit-btn">
+        <button type="submit" className="user-account-submit-btn">
           Login
         </button>
-        <p className="signup-prompt">
+        <p className="prompt">
           Don't have an account? <a href="/signup">Sign Up</a>
         </p>
       </form>

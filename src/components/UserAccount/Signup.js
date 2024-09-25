@@ -3,24 +3,42 @@ import "./UserAccount.css";
 
 function Signup() {
   return (
-    <div className="signup-page">
-      <h2>Sign Up</h2>
-      <form className="signup-form">
+    <div className="user-account-page">
+      <h2 className="user-account-title">Create Your Account</h2>
+      <form className="user-account-form">
         <div className="form-group">
-          <label>Full Name</label>
-          <input type="text" required />
+          <label htmlFor="full-name">Full Name</label>
+          <input
+            type="text"
+            id="full-name"
+            required
+            placeholder="Enter your full name"
+          />
         </div>
         <div className="form-group">
-          <label>Email</label>
-          <input type="email" required />
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="Enter your email"
+          />
         </div>
         <div className="form-group">
-          <label>Password</label>
-          <input type="password" required />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Enter your password"
+          />
         </div>
-        <button type="submit" className="signup-submit-btn">
+        <button type="submit" className="user-account-submit-btn">
           Sign Up
         </button>
+        <p className="prompt">
+          Already have an account? <a href="/login">Login</a>
+        </p>
       </form>
     </div>
   );
