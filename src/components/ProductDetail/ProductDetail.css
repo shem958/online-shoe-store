@@ -1,42 +1,58 @@
 .product-detail {
-    display: flex;
-    padding: 2rem;
+    display: flex; /* Flex layout for image and info */
+    justify-content: space-between; /* Space between image and details */
+    align-items: flex-start; /* Align items at the start */
+    padding: 2rem; /* Padding for spacing */
+    background-color: #ffffff; /* Light mode background */
+    border: 1px solid #e1e1e1; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.product-detail-image img {
-          max-width: 100%;
-         height: auto;
-         border-radius: 5px;
+.product-detail-image {
+    flex: 1; /* Allow image to take available space */
+    max-width: 400px; /* Max width for image container */
+    margin-right: 2rem; /* Space between image and info */
 }
+
+.product-detail-image .image {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px; /* Match border radius with container */
+}
+
 .product-detail-info {
-    margin-left: 2rem;
+    flex: 2; /* Allow info section to take more space */
 }
 
-.product-detail-info h1 {
- font-size: 2rem;
- margin-bottom: 1rem;
+.product-name {
+    font-family: 'Rubik', sans-serif; /* Use Rubik font */
+    font-size: 2rem; /* Heading size */
+    margin-bottom: 0.5rem; /* Space below heading */
 }
 
-.product-detail-info p {
-font-size: 1.2rem;
-margin-bottom: 1.5rem;
+.product-description {
+    font-size: 1rem; /* Description font size */
+    margin-bottom: 1rem; /* Space below description */
+    color: #555; /* Darker color for better readability */
 }
 
-.product-detail-info h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 2rem;
+.product-price {
+    font-size: 1.5rem; /* Price font size */
+    color: #007BFF; /* Highlight price color */
+    margin-bottom: 1rem; /* Space below price */
 }
-
 
 .add-to-cart-btn {
-padding: 0.8rem 2rem;
-background-color: #333;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+    background-color: #007BFF; /* Button background */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 0.75rem 1.5rem; /* Button padding */
+    border-radius: 5px; /* Rounded button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s; /* Smooth background transition */
 }
 
-
-
+.add-to-cart-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
