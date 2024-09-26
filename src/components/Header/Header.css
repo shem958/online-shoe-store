@@ -8,11 +8,29 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo a {
-    color: #333; /* Dark text */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-link {
     text-decoration: none;
-    font-size: 1.5rem;
+    color: #333; /* Dark text */
+}
+
+.logo-image {
+    width: 60px; /* Adjust the width of the logo as needed */
+    height: auto;
+}
+
+.logo-text {
     font-family: 'Rubik', sans-serif; /* Apply Rubik font */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.3rem; /* Spacing between the logo and the text */
+    color: #333; /* Dark text color */
 }
 
 nav ul {
@@ -76,12 +94,14 @@ nav ul li a:hover {
         flex-direction: column;
         align-items: flex-start;
     }
+
     nav ul {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
         margin: 1rem 0;
     }
+
     .search-container {
         margin: 0.5rem 0;
     }

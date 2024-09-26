@@ -2,15 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import "./Header.css";
+import HavenLogo from "../../assets/icons/Haven.svg"; // Import the SVG file
 
-function Header() {
+function Header({ user }) {
   return (
     <header className="header">
-      <div className="logo">
-        <Link to="/">Shoe Haven</Link>
+      {/* Logo Section */}
+      <div className="logo-container">
+        <Link to="/" className="logo-link">
+          <img src={HavenLogo} alt="Haven Logo" className="logo-image" />
+          <span className="logo-text">Shoe Haven</span>
+        </Link>
       </div>
+
+      {/* Navigation Links */}
       <nav>
-        <ul>
+        <ul className="nav-links">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -25,6 +32,8 @@ function Header() {
           </li>
         </ul>
       </nav>
+
+      {/* Header Icons */}
       <div className="header-icons">
         <div className="search-container">
           <input type="text" placeholder="Search..." className="search-input" />
@@ -32,9 +41,6 @@ function Header() {
         </div>
         <Link to="/cart" className="icon-link">
           <i className="cart-icon">🛒</i>
-        </Link>
-        <Link to="/account" className="icon-link">
-          <i className="user-icon">👤</i>
         </Link>
       </div>
     </header>
